@@ -1,4 +1,117 @@
 /* ===============================
+   Styles du Menu Burger (inchangés)
+   =============================== */
+   .burger-menu {
+    position: fixed;
+    top: 20px;       /* Distance du haut */
+    left: 20px;      /* Distance de la gauche */
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 2000;   /* Au-dessus de tout */
+  }
+  
+  .burger-menu span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .burger-menu:hover span {
+    background-color: #BFE8FF;
+  }
+  /* ===============================
+   Styles Généraux
+   =============================== */
+body {
+    font-family: Arial, sans-serif;  /* Police de base */
+    text-align: center;
+    background-color: #1a202c;         /* Couleur du fond */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   Contenu Principal
+   ===============================
+   .main-content centre le contenu sur toute la hauteur de la fenêtre.
+*/
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Utilise toute la hauteur de la fenêtre */
+}
+
+/* ===============================
+   Section Logo
+   ===============================
+   Affiche le logo et le texte "IApprenons" au-dessus de la boîte de téléchargement.
+*/
+.logo-section {
+    margin-bottom: 2rem; /* Espace entre le logo et la boîte de téléchargement */
+}
+
+/* 
+  Modifier la taille du logo en ajustant la largeur (width).
+  Vous pouvez changer la valeur pour obtenir la taille désirée.
+*/
+.logo-section .logo {
+    width: 100px;  /* Exemple : passez de 80px à 100px ou toute autre valeur */
+    height: auto;
+}
+.logo-section .logo-text {
+    font-size: 1.5rem;  /* Taille du texte "IApprenons" */
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    margin-top: 0.5rem; /* Espace entre le logo et le texte */
+}
+  
+  /* ===============================
+     Styles de l'Overlay Menu (inchangés)
+     =============================== */
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* Menu caché hors écran */
+    width: 250px;
+    height: 100%;
+    background-color: #2d3748;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1500;
+    padding-top: 60px; /* Pour laisser un espace en haut */
+  }
+  
+  .overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .overlay-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .overlay-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .overlay-menu a:hover {
+    color: #BFE8FF;
+  }
+  
+
+/* ===============================
    Styles personnalisés pour le Menu Burger et l'Overlay
    =============================== */
 
@@ -66,8 +179,8 @@
      Section Logo
      =============================== */
   .logo-section .logo {
-    width: 100px;  /* Ajustez ici la taille du logo */
-    height: auto;
+    width: 160px;  /* Ajustez ici la taille du logo */
+    height: 160px;
   }
   
   .logo-section .logo-text {
@@ -77,3 +190,34 @@
     margin-top: 0.5rem;
   }
   
+  button {
+    background-color: #BFE8FF; 
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem; 
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3182ce; 
+}
+
+.inner-container {
+  max-width: 32rem; 
+  margin: auto;
+  background-color: #2d3748; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0.75rem; 
+  padding: 2rem;
+}
+
+h1 {
+  color: #FFFFFF;
+}
+
+h1 span {
+  color: #BFE8FF;
+}
