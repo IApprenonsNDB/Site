@@ -1,96 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #1a202c; /* Couleur du fond de la page */
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
+/* ===============================
+   Styles personnalisés pour le Menu Burger et l'Overlay
+   =============================== */
 
-.inner-container {
-    max-width: 32rem; 
-    margin: auto;
-    background-color: #2d3748; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 0.75rem; 
-    padding: 2rem;
-}
-
-h1 {
-    color: #ffffff;
-}
-
-h1 span {
-    color: #BFE8FF; 
-}
-
-p {
-    color: #a0aec0;
-}
-
-button {
-    background-color: #BFE8FF; 
-    color: #ffffff;
-    border: none;
-    padding: 0.75rem 1.5rem; 
-    font-size: 1rem;
-    border-radius: 0.5rem;
+/* Bouton Burger */
+.burger-menu {
+    position: fixed;
+    top: 20px;       /* Distance du haut */
+    left: 20px;      /* Distance de la gauche */
+    width: 30px;
+    height: 25px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #3182ce; 
-}
-
-.navbar {
-    width: 100%;
-    height: 60px;
-    background-color: #2d3748;
+    z-index: 2000;   /* Au-dessus de tout */
+  }
+  
+  .burger-menu span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .burger-menu:hover span {
+    background-color: #BFE8FF;
+  }
+  
+  /* Menu Overlay Vertical */
+  .overlay-menu {
     position: fixed;
     top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    padding: 0 20px;
-}
-
-.menu {
-    width: 100%;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-between; 
-    list-style: none; 
+    left: -250px;  /* Caché hors écran */
+    width: 250px;
+    height: 100%;
+    background-color: #2d3748;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1500;
+    padding-top: 60px; /* Pour laisser de l'espace en haut */
+  }
+  
+  .overlay-menu ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-}
-
-.menu li {
-    flex: 1; 
+  }
+  
+  .overlay-menu li {
+    margin: 10px 0;
     text-align: center;
-}
-
-.menu a {
-    display: block;
+  }
+  
+  .overlay-menu a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: bold;
-    padding: 15px 0; 
-    transition: color 0.3s ease-in-out;
-}
-
-.menu a:hover {
+    transition: color 0.3s ease;
+  }
+  
+  .overlay-menu a:hover {
     color: #BFE8FF;
-}
-
-/* Décale le contenu en-dessous du menu */
-.content-container {
-    margin-top: 80px;
-}
+  }
+  
+  /* ===============================
+     Section Logo
+     =============================== */
+  .logo-section .logo {
+    width: 100px;  /* Ajustez ici la taille du logo */
+    height: auto;
+  }
+  
+  .logo-section .logo-text {
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    margin-top: 0.5rem;
+  }
+  
