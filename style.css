@@ -10,7 +10,7 @@
     cursor: pointer;
     z-index: 2000;   /* Au-dessus de tout */
   }
-  
+ 
   .burger-menu span {
     display: block;
     height: 4px;
@@ -19,11 +19,11 @@
     border-radius: 2px;
     transition: background-color 0.3s ease;
   }
-  
+ 
   .burger-menu:hover span {
     background-color: #BFE8FF;
   }
-  
+ 
   /* ===============================
    Styles Généraux
    =============================== */
@@ -58,7 +58,7 @@ body {
     margin-bottom: 2rem; /* Espace entre le logo et la boîte de téléchargement */
 }
 
-/* 
+/*
   Modifier la taille du logo en ajustant la largeur (width).
   Vous pouvez changer la valeur pour obtenir la taille désirée.
 */
@@ -72,7 +72,7 @@ body {
     color: white;
     margin-top: 0.5rem; /* Espace entre le logo et le texte */
 }
-  
+ 
   /* ===============================
      Styles de l'Overlay Menu (inchangés)
      =============================== */
@@ -88,29 +88,29 @@ body {
     z-index: 1500;
     padding-top: 60px; /* Pour laisser un espace en haut */
   }
-  
+ 
   .overlay-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+ 
   .overlay-menu li {
     margin: 10px 0;
     text-align: center;
   }
-  
+ 
   .overlay-menu a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
   }
-  
+ 
   .overlay-menu a:hover {
     color: #BFE8FF;
   }
-  
+ 
 
 /* ===============================
    Styles personnalisés pour le Menu Burger et l'Overlay
@@ -126,7 +126,7 @@ body {
     cursor: pointer;
     z-index: 2000;   /* Au-dessus de tout */
   }
-  
+ 
   .burger-menu span {
     display: block;
     height: 4px;
@@ -135,11 +135,11 @@ body {
     border-radius: 2px;
     transition: background-color 0.3s ease;
   }
-  
+ 
   .burger-menu:hover span {
     background-color: #BFE8FF;
   }
-  
+ 
   /* Menu Overlay Vertical */
   .overlay-menu {
     position: fixed;
@@ -153,29 +153,29 @@ body {
     z-index: 1500;
     padding-top: 60px; /* Pour laisser de l'espace en haut */
   }
-  
+ 
   .overlay-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+ 
   .overlay-menu li {
     margin: 10px 0;
     text-align: center;
   }
-  
+ 
   .overlay-menu a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
   }
-  
+ 
   .overlay-menu a:hover {
     color: #BFE8FF;
   }
-  
+ 
   /* ===============================
      Section Logo
      =============================== */
@@ -183,19 +183,19 @@ body {
     width: 160px;  /* Ajustez ici la taille du logo */
     height: 160px;
   }
-  
+ 
   .logo-section .logo-text {
     font-size: 1.5rem;
     font-family: 'Oswald', sans-serif;
     color: white;
     margin-top: 0.5rem;
   }
-  
+ 
   button {
-    background-color: #BFE8FF; 
+    background-color: #BFE8FF;
     color: #ffffff;
     border: none;
-    padding: 0.75rem 1.5rem; 
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -203,15 +203,15 @@ body {
 }
 
 button:hover {
-    background-color: #3182ce; 
+    background-color: #3182ce;
 }
 
 .inner-container {
-  max-width: 32rem; 
+  max-width: 32rem;
   margin: auto;
-  background-color: #2d3748; 
+  background-color: #2d3748;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 0.75rem; 
+  border-radius: 0.75rem;
   padding: 2rem;
 }
 
@@ -221,4 +221,69 @@ h1 {
 
 h1 span {
   color: #BFE8FF;
+}
+/* style.css */
+
+/* Fond général */
+body.bg {
+  background-color: #1a202c;
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* En-tête de la page */
+.page-header {
+  text-align: center;
+  margin: 40px 20px 30px;
+}
+
+.page-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+/* Conteneur principal */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Conteneur des fonctionnalités */
+.features-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Style des boîtes */
+.feature-box {
+  background-color: #2d3748;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: transform 0.2s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-3px);
+}
+
+.feature-box h2 {
+  font-size: 1.6em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 1em;
+  color: #b2b2b2;
+  margin-bottom: 10px;
 }
