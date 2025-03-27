@@ -1,108 +1,82 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 
-  <head>
+<head>
+  <!-- Données principales -->
+  <meta charset="utf-8" />
+  <title>IApprenons !</title>
+  <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
 
-    <!-- Données principales -->
-    <meta charset="utf-8" />
-    <title>IApprenons !</title>
-    <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
+  <!-- Inclusion du CSS -->
+  <link rel="stylesheet" media="all" href="style.css" />
 
-    <!-- Inclusion du CSS et du Tailwind -->
-    <link rel="stylesheet" media="all" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Meta données -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
+  <meta name="description" content="Le site internet pour installer l'application d'IApprenons !" />
 
-    <!-- Meta données -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
-    <meta name="description" content="Le site internet pour installer l'application d'IApprenons !" />
+  <!-- Inclusion des polices depuis Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik:wght@500&family=Karla:wght@500&display=swap" rel="stylesheet"/>
 
-    <!-- Inclusion des polices depuis Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik:wght@500&family=Karla:wght@500&display=swap" rel="stylesheet"/>
+  <!-- Indexation google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IApprenons",
+      "url": "https://iapprenons.fr",
+      "logo": "https://iapprenons.fr/public/images/favicon.ico"
+    }
+  </script>
 
-    <!-- Indexation google -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "IApprenons",
-        "url": "https://iapprenons.fr",
-        "logo": "https://iapprenons.fr/public/images/favicon.ico"
-      }
-    </script>
+</head>
 
-  </head>
-  
-  <body class="flex items-center justify-center min-h-screen relative">
+<body>
+  <!-- ===============================
+       Bouton Menu Burger
+     =============================== -->
+  <div class="burger-menu" id="burger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <!-- ===============================
-         Bouton Menu Burger
-         ===============================
-         Ce bouton composé de trois <span> représente les trois traits.
-         Il est positionné en haut à gauche et réagit au survol.
-    -->
+  <!-- ===============================
+       Menu Overlay Vertical
+     =============================== -->
+  <div class="overlay-menu" id="overlay-menu">
+    <ul>
+      <li><a href="index.html">Accueil🏠</a></li>
+      <li><a href="pages/documentation.html">Documentation📖</a></li>
+      <li><a href="pages/about.html">À propos🎯</a></li>
+      <li><a href="pages/contact.html">Contact💻</a></li>
+    </ul>
+  </div>
 
-    <div class="burger-menu" id="burger-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- ===============================
+       Contenu Principal
+     =============================== -->
+  <div class="main-content">
+    <!-- Section Logo -->
+    <div class="logo-section">
+      <a class="flex flex-col items-center">
+        <img src="public/images/logo.png" alt="Logo IApprenons" class="logo">
+      </a>
     </div>
 
-    <!-- ===============================
-         Menu Overlay Vertical
-         ===============================
-         Ce menu latéral s'ouvre depuis la gauche par-dessus le contenu.
-    -->
+    <!-- Boîte de Téléchargement -->
+    <div class="inner-container">
+      <h1>Bienvenue sur <span>IApprenons</span></h1>
+      <p>Téléchargez notre application dès maintenant :</p>
 
-    <div class="overlay-menu" id="overlay-menu">
-      <ul>
-        <li><a href="index.html">Accueil🏠</a></li>
-        <li><a href="pages/documentation.html">Documentation📖</a></li>
-        <li><a href="pages/about.html">À propos🎯</a></li>
-        <li><a href="pages/contact.html">Contact💻
-        </a></li>
-      </ul>
+      <button id="download-btn">Télécharger</button>
     </div>
+  </div>
 
-    <!-- ===============================
-         Contenu Principal
-         ===============================
-         Cette section contient le logo (avec texte "IApprenons")
-         au-dessus de la boîte de téléchargement.
-    -->
+  <!-- Inclusion du script js -->
+  <script src="script.js"></script>
+</body>
 
-    <div class="main-content flex flex-col items-center">
-
-      <!-- Section Logo -->
-      <div class="logo-section mb-4">
-        <a class="flex flex-col items-center">
-
-          <!-- 
-               Pour changer la taille du logo, ajustez la largeur via la classe "logo" dans le CSS 
-          -->
-
-          <img src="public/images/logo.png" alt="Logo IApprenons" class="logo">
-        </a>
-      </div>
-
-      <!-- Boîte de Téléchargement avec le bouton stylisé en Tailwind -->
-      <div class="inner-container text-center p-8 shadow-lg rounded-xl max-w-lg">
-
-        <h1 class="text-3xl font-bold mb-4">Bienvenue sur <span>IApprenons</span></h1>
-        <p class="mb-6">Téléchargez notre application dès maintenant :</p>
-
-        <button id="download-btn" class="font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-300">
-          Télécharger
-        </button>
-
-      </div>
-    </div>
-
-    <!-- Inclusion du script js -->
-    <script src="script.js"></script>
-
-  </body>
 </html>
