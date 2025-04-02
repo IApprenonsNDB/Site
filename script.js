@@ -23,3 +23,4 @@ document.addEventListener("click", function(event) {
 document.getElementById("download-btn").addEventListener("click", function() {
   window.location.href = "public/IApprenons.exe"; 
 });
+

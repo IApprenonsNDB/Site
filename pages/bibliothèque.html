@@ -4,97 +4,32 @@
   <meta charset="UTF-8">
   <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon" />
   <title>Bibliothèque IA</title>
-  <style>
-    body {
-  font-family: 'Karla', Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #1a202c;
-  color: #ffffff;
-  text-align: center;
-}
-
-h1 {
-  color: #ffffff;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-#searchBar {
-  display: block;
-  margin: 20px auto 40px;
-  padding: 12px 16px;
-  width: 60%;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: none;
-  background-color: #2d3748;
-  color: #ffffff;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-}
-
-#searchBar::placeholder {
-  color: #a0aec0;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.item {
-  background-color: #2d3748;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  padding: 25px;
-  width: 200px;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}
-
-.item img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  border: 2px solid #4a5568;
-}
-
-.item h3 {
-  margin: 10px 0 8px;
-  font-size: 1.1rem;
-  color: #ffffff;
-}
-
-.keywords {
-  font-size: 12px;
-  color: #b2b2b2;
-}
-
-.keywords span {
-  display: inline-block;
-  margin: 2px 4px;
-  padding: 3px 6px;
-  background-color: #4a5568;
-  color: #edf2f7;
-  border-radius: 4px;
-  font-size: 0.75rem;
-}
-
-  </style>
+  <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" media="all" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
+  <meta name="description" content="Le site internet pour installer l'application d'IApprenons !" />
 </head>
 <body>
+  <div class="burger-menu" id="burger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ===============================
+       Menu Overlay Vertical
+     =============================== -->
+  <div class="overlay-menu" id="overlay-menu">
+    <ul>
+      <li><a href="../index.html">Accueil🏠</a></li>
+      <li><a href="documentation.html">Documentation📖</a></li>
+      <li><a href="about.html">À propos🎯</a></li>
+      <li><a href="contact.html">Contact💻</a></li>
+      <li><a href="bibliothèque.html">Bibliothèque IA</a></li>
+    </ul>
+  </div>
+
   <h1>Bibliothèque IA</h1>
   <input type="text" id="searchBar" placeholder="🔍 Cherche un mot-clé...">
 
@@ -104,50 +39,54 @@ h1 {
 
   <script>
     const items = [
-      {
-        logo: "../public/images/deepseek.png",
-        titre: "Deepseek",
-        motsCles: ["chat", "assistant", "texte", "chatbot", "generative"],
-        lien: "https://www.deepseek.com/"
-      },
-      {
-        logo: "../public/images/ideogram.png",
-        titre: "Ideogram",
-        motsCles: ["image", "photo", "dessin", "peinture", "generative"],
-        lien: "https://ideogram.ai/t/explore"
-      },
-    ];
+  {
+    logo: "../public/images/deepseek.png",
+    titre: "Deepseek",
+    motsCles: ["chat", "assistant", "texte", "chatbot", "generative"],
+    lien: "https://www.deepseek.com/"
+  },
+  {
+    logo: "../public/images/ideogram.png",
+    titre: "Ideogram",
+    motsCles: ["image", "photo", "dessin", "peinture", "generative"],
+    lien: "https://ideogram.ai/t/explore"
+  },
+];
 
-    const container = document.getElementById("library");
-    const searchBar = document.getElementById("searchBar");
+const container = document.getElementById("library");
+const searchBar = document.getElementById("searchBar");
 
-    function renderItems(filter = "") {
-      container.innerHTML = "";
-      const filtered = items.filter(item =>
-        item.motsCles.some(mot => mot.toLowerCase().includes(filter.toLowerCase()))
-      );
+function renderItems(filter = "") {
+  container.innerHTML = "";
+  const filtered = items.filter(item =>
+    item.motsCles.some(mot => mot.toLowerCase().includes(filter.toLowerCase()))
+  );
 
-      filtered.forEach(item => {
-        const a = document.createElement("a");
-        a.className = "item";
-        a.href = item.lien;
-        a.target = "_blank";
-        a.innerHTML = `
-          <img src="${item.logo}" alt="logo">
-          <h3>${item.titre}</h3>
-          <div class="keywords">
-            ${item.motsCles.map(m => `<span>${m}</span>`).join("")}
-          </div>
-        `;
-        container.appendChild(a);
-      });
-    }
+  filtered.forEach(item => {
+    const a = document.createElement("a");
+    a.className = "item";
+    a.href = item.lien;
+    a.target = "_blank";
+    a.innerHTML = `
+      <img src="${item.logo}" alt="logo">
+      <h3>${item.titre}</h3>
+      <div class="keywords">
+        ${item.motsCles.map(m => `<span>${m}</span>`).join("")}
+      </div>
+    `;
+    container.appendChild(a);
+  });
+}
 
-    searchBar.addEventListener("input", e => {
-      renderItems(e.target.value);
-    });
+searchBar.addEventListener("input", e => {
+  renderItems(e.target.value);
+});
 
-    renderItems();
+renderItems();
+
   </script>
+
+  <!-- Inclusion du script js -->
+  <script src="../script.js"></script>
 </body>
 </html>
