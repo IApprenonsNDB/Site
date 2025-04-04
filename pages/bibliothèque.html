@@ -2,9 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon"/>
   <title>Bibliothèque IA</title>
-  <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" media="all" href="../style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
@@ -76,11 +75,17 @@ const searchBar = document.getElementById("searchBar");
 
 function renderItems(filter = "") {
   container.innerHTML = "";
-  const filtered = items.filter(item =>
-    item.titre.toLowerCase().includes(filter.toLowerCase()) ||
-    item.motsCles.some(mot => mot.toLowerCase().includes(filter.toLowerCase()))
-  );
 
+  const searchTerms = filter.toLowerCase().split(" ").filter(Boolean);
+
+  const filtered = items.filter(item => {
+    const allText = [
+      item.titre.toLowerCase(),
+      ...item.motsCles.map(m => m.toLowerCase())
+    ].join(" ");
+
+    return searchTerms.every(term => allText.includes(term));
+  });
 
   filtered.forEach(item => {
     const a = document.createElement("a");
