@@ -40,6 +40,12 @@
   <script>
     const items = [
   {
+    logo: "../public/images/mistral.png",
+    titre: "Mistral",
+    motsCles: ["chat", "assistant", "texte", "chatbat", "generative"],
+    lien: "https://chat.mistral.ai/chat"
+  },
+  {
     logo: "../public/images/deepseek.png",
     titre: "Deepseek",
     motsCles: ["chat", "assistant", "texte", "chatbot", "generative"],
@@ -57,6 +63,12 @@
     motsCles: ["music", "chanson", "parole", "melodie", "generative"],
     lien: "https://suno.com/home"
   },
+  {
+    logo: "../public/images/kimi.png",
+    titre: "Kimi",
+    motsCles: ["chat", "assistant", "texte", "chatbat", "generative"],
+    lien: "https://kimi.ai/"
+  },
 ];
 
 const container = document.getElementById("library");
@@ -65,8 +77,10 @@ const searchBar = document.getElementById("searchBar");
 function renderItems(filter = "") {
   container.innerHTML = "";
   const filtered = items.filter(item =>
+    item.titre.toLowerCase().includes(filter.toLowerCase()) ||
     item.motsCles.some(mot => mot.toLowerCase().includes(filter.toLowerCase()))
   );
+
 
   filtered.forEach(item => {
     const a = document.createElement("a");
