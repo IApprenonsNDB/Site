@@ -175,49 +175,60 @@
     titre: "Quiz Wizard",
     motsCles: ["QCM", "flashcard", "cours", "génératif"],
     lien: "https://www.getquizwizard.com/"
-  },
-];
+   },
+    {
+      logo: "../public/images/secret.png",
+      titre: "CTPWM",
+      lien: "https://example.com/secret",
+      special: true
+    },
+  ];
 
-const container = document.getElementById("library");
-const searchBar = document.getElementById("searchBar");
+  const container = document.getElementById("library");
+  const searchBar = document.getElementById("searchBar");
 
-function renderItems(filter = "") {
-  container.innerHTML = "";
+  function renderItems(filter = "") {
+    container.innerHTML = "";
+    
+    // On découpe le filtre en mots pour les éléments non-spéciaux
+    const searchTerms = filter.toLowerCase().split(" ").filter(Boolean);
 
-  const searchTerms = filter.toLowerCase().split(" ").filter(Boolean);
+    const filtered = items.filter(item => {
+      // Si l'élément a la propriété 'special'
+      if (item.special) {
+        // On affiche l'élément uniquement si la saisie correspond exactement à son titre (sans espaces superflus et en ignorant la casse)
+        return filter.trim().toLowerCase() === item.titre.toLowerCase();
+      }
+      // Pour les autres éléments, on conserve le filtrage normal
+      const allText = [
+        item.titre.toLowerCase(),
+        ...item.motsCles.map(m => m.toLowerCase())
+      ].join(" ");
+      return searchTerms.every(term => allText.includes(term));
+    });
 
-  const filtered = items.filter(item => {
-    const allText = [
-      item.titre.toLowerCase(),
-      ...item.motsCles.map(m => m.toLowerCase())
-    ].join(" ");
+    filtered.forEach(item => {
+      const a = document.createElement("a");
+      a.className = "item";
+      a.href = item.lien;
+      a.target = "_blank";
+      a.innerHTML = `
+        <img src="${item.logo}" alt="logo">
+        <h3>${item.titre}</h3>
+        <div class="keywords">
+          ${item.motsCles.map(m => `<span>${m}</span>`).join("")}
+        </div>
+      `;
+      container.appendChild(a);
+    });
+  }
 
-    return searchTerms.every(term => allText.includes(term));
+  searchBar.addEventListener("input", e => {
+    renderItems(e.target.value);
   });
 
-  filtered.forEach(item => {
-    const a = document.createElement("a");
-    a.className = "item";
-    a.href = item.lien;
-    a.target = "_blank";
-    a.innerHTML = `
-      <img src="${item.logo}" alt="logo">
-      <h3>${item.titre}</h3>
-      <div class="keywords">
-        ${item.motsCles.map(m => `<span>${m}</span>`).join("")}
-      </div>
-    `;
-    container.appendChild(a);
-  });
-}
-
-searchBar.addEventListener("input", e => {
-  renderItems(e.target.value);
-});
-
-renderItems();
-
-  </script>
+  renderItems();
+</script>
 
   <!-- Inclusion du script js -->
   <script src="../script.js"></script>
