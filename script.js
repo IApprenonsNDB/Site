@@ -21,7 +21,7 @@ document.addEventListener("click", function(event) {
 
 // Gestion du bouton de téléchargement
 document.getElementById("download-btn").addEventListener("click", function() {
-  window.location.href = "public/IApprenons.exe"; 
+  window.location.href = "public/IApprenons_installeur.exe"; 
 });
 
 document.addEventListener('DOMContentLoaded', function () {
