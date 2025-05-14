@@ -24,3 +24,26 @@ document.getElementById("download-btn").addEventListener("click", function() {
   window.location.href = "public/IApprenons.exe"; 
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const showVideoBtn = document.getElementById('show-video-btn');
+  const videoContainer = document.getElementById('video-container');
+  const closeVideoBtn = document.getElementById('close-video-btn');
+  const video = videoContainer.querySelector('video'); // Sélectionne la vidéo dans le conteneur
+
+  showVideoBtn.addEventListener('click', function () {
+    videoContainer.style.display = 'block';
+    showVideoBtn.style.display = 'none';
+    if (video) {
+      video.play();
+    }
+  });
+
+  closeVideoBtn.addEventListener('click', function () {
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+    videoContainer.style.display = 'none';
+    showVideoBtn.style.display = 'inline-block';
+  });
+});
