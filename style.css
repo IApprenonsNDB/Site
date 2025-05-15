@@ -46,11 +46,17 @@ body, body.bg {
    Boutons
    =============================== */
 
-   .video-button-container {
+.video-button-container {
     display: flex;
     justify-content: center;
     margin-top: 2px;
-  }
+}
+
+.close-video-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
 
 button {
     background-color: #007dc575;
