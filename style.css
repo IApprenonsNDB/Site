@@ -3,6 +3,30 @@
     transition: transform 0.3s ease;
   }  
 
+  .burger-menu.rotate2 {
+    transform: rotate(-360deg);
+    transition: transform 0.3s ease;
+  }  
+
+#overlayImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none; /* caché par défaut */
+}
+
+#overlayImage img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
 /* ===============================
    Réinitialisation et Fond général
    =============================== */

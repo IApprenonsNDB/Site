@@ -5,12 +5,31 @@ document.getElementById("burger-menu").addEventListener("click", function(event)
 
   if (menu.style.left === "0px") {
     menu.style.left = "-250px"; // Cache le menu
-    burger.classList.remove("rotate");
+    burger.classList.remove("rotate")
+    burger.classList.add("rotate2");
   } else {
     menu.style.left = "0px"; // Affiche le menu
+    burger.classList.remove("rotate2")
     burger.classList.add("rotate");
   }
 });
+
+let compteur = 0;
+const overlay = document.getElementById("overlayImage");
+
+document.getElementById("logo").addEventListener("click", function(event){
+  compteur++
+  if (compteur === 10) {
+      // Affiche l'image
+    overlay.style.display = "flex";
+
+    // Cache l'image après 3 secondes (3000 ms)
+    setTimeout(() => {
+      overlay.style.display = "none";
+      compteur = 0
+    }, 300);
+  
+}})
 
 
 // Ferme le menu si on clique hors de celui-ci
