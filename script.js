@@ -25,8 +25,9 @@ document.addEventListener("click", function(event) {
 
 // Gestion du bouton de téléchargement
 document.getElementById("download-btn").addEventListener("click", function() {
-  window.location.href = "public/IApprenons_installeur.exe"; 
+  window.location.href = "https://drive.google.com/uc?export=download&id=1_r6ynsNBFA06Zr3B9SD0bF8WHSGLo4jp";
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const showVideoBtn = document.getElementById('show-video-btn');
