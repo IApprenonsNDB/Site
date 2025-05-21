@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const downloadBtn = document.getElementById("download-btn");
   if (downloadBtn) {
     downloadBtn.addEventListener("click", function () {
-      window.location.href = "https://drive.google.com/uc?export=download&id=1_r6ynsNBFA06Zr3B9SD0bF8WHSGLo4jp";
+      window.location.href = "https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9mNTI0ZmRlMWQ2ZTMzN2VhL0VRTlU3ZW5xR2pGSWdoSW9fNldzOE5zQmZqVE9QdExTR3NTOEMyOFZHcU5lVFE%5FZT1yOHdBdGE&cid=F524FDE1D6E337EA&id=F524FDE1D6E337EA%21se9ed54031aea4831821228ffa5acf0db&parId=F524FDE1D6E337EA%21104&o=OneUp";
     });
   }
 
