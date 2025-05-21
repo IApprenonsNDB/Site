@@ -1,86 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <!-- Données principales -->
-  <meta charset="utf-8" />
-  <title>IApprenons !</title>
-  <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
-
-  <!-- Inclusion du CSS -->
-  <link rel="stylesheet" media="all" href="../style.css" />
-
-  <!-- Meta données -->
+  <meta charset="UTF-8" />
+  <title>À propos - iApprenons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
-  <meta name="description" content="Le site internet pour installer l'application d'IApprenons !" />
-
-  <!-- Inclusion des polices depuis Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik:wght@500&family=Karla:wght@500&display=swap" rel="stylesheet"/>
-
-  <!-- Indexation google -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IApprenons",
-      "url": "https://iapprenons.fr",
-      "logo": "https://iapprenons.fr/public/images/favicon.ico"
-    }
-  </script>
-
-</head>
-
-<body>
-  <!-- ===============================
-       Bouton Menu Burger
-     =============================== -->
-  <div class="burger-menu" id="burger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <!-- ===============================
-       Menu Overlay Vertical
-     =============================== -->
-  <div class="overlay-menu" id="overlay-menu">
-    <ul>
-      <li><a href="../index.html">Accueil🏠</a></li>
-      <li><a href="documentation.html">Documentation📖</a></li>
-      <li><a href="about.html">À propos🎯</a></li>
-      <li><a href="contact.html">Contact💻</a></li>
-      <li><a href="bibliothèque.html">Bibliothèque IA 📚</a></li>
-    </ul>
-  </div>
-
-  <!-- ===============================
-       Contenu Principal
-     =============================== -->
-     <div class="main-content">
-
-      <!-- Titre de la page -->
-      <div class="page-header">
-          <h1>A propos d'IApprenons</h1>
-          <div class="inner-container">
-            <p>IApprenons, c’est l’histoire d’un projet né d’une envie simple : utiliser nos compétences en informatique pour créer quelque chose d’utile, accessible et intelligent.</p>
-            <p>Tout a commencé en cours de NSI. On avait tous cette même idée en tête : pourquoi ne pas construire une application qui aide vraiment les élèves dans leur quotidien scolaire ? Pas un énième agenda numérique ou un moteur de recherche paresseux, mais un vrai assistant basé sur l’intelligence artificielle, pensé pour comprendre et accompagner.</p>
-            <p>Petit à petit, l’idée a pris forme.<br>
-            On a designé une interface simple, développé des fonctionnalités utiles, écrit (et réécrit) des lignes de code, corrigé des bugs... beaucoup de bugs.<br>
-            On a appris à bosser ensemble, à réfléchir comme une équipe, à aller au bout des choses.</p>
-            <p>Ce projet, c’est plus qu’un exercice de programmation.<br>
-            C’est une application qu’on aurait aimé avoir pour nous-mêmes.<br>
-            Aujourd’hui, on est fiers de pouvoir la partager avec d’autres élèves, en espérant qu’elle leur sera aussi utile qu’elle l’a été pour nous à la construire.</p>
-        </div>
-
-      </div>
-
-  </div>
-
-  <!-- Inclusion du script js -->
+  <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
   <script src="../script.js"></script>
-</body>
+</head>
+<body>
 
+  <header>
+    <img src="../public/images/logo.png" alt="Logo iApprenons" style="position: absolute; top: 20px; left: 40px; height: 60px;">
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="bibliothèque.html">Bibliothèque d'IA</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <h1>À propos d'iApprenons</h1>
+    <p>Découvrez comment est né ce projet éducatif pensé pour les élèves.</p>
+
+    <div style="
+      max-width: 2500px;
+      margin: .5rem auto;
+      padding: .5rem 15rem;
+      border-radius: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      color: #333;
+    ">
+      <p><strong>IApprenons</strong>, c’est l’histoire d’un projet né d’une envie simple : utiliser nos compétences en informatique pour créer quelque chose d’utile, accessible et intelligent.</p>
+      <p>Tout a commencé en cours de NSI. On avait tous cette même idée en tête : pourquoi ne pas construire une application qui aide vraiment les élèves dans leur quotidien scolaire ?</p>
+      <p>Petit à petit, l’idée a pris forme. On a designé une interface simple, développé des fonctionnalités utiles, corrigé des bugs... beaucoup de bugs.</p>
+      <p>Ce projet, c’est plus qu’un exercice de programmation. C’est une application qu’on aurait aimé avoir pour nous-mêmes.</p>
+      <p>Aujourd’hui, on est fiers de pouvoir la partager avec d’autres élèves.</p>
+    </div>
+  </header>
+
+  <footer>
+    &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
+  </footer>
+
+</body>
 </html>
