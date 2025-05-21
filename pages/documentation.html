@@ -1,109 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="utf-8" />
-    <title>Documentation - Fonctionnalités</title>
-    <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" media="all" href="../style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
-    <meta name="description" content="Documentation des fonctionnalités de l'application IApprenons." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik:wght@500&family=Karla:wght@500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <title>Documentation - iApprenons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js"></script>
 </head>
+<body>
 
-<body class="bg">
+  <header>
+    <img src="../public/images/logo.png" alt="Logo iApprenons" style="position: absolute; top: 20px; left: 40px; height: 60px;">
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="bibliothèque.html">Bibliothèque d'IA</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <h1>Documentation des fonctionnalités</h1>
+    <p>Explore toutes les possibilités offertes par iApprenons !</p>
 
-    <!-- Menu Burger -->
-    <div class="burger-menu" id="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div style="
+      max-width: 900px;
+      margin: .5rem auto;
+      padding: .75rem 4rem;
+      border-radius: 1rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+    ">
+      <ul style="padding-left: 1.5rem; list-style: none;">
+        <li><strong>Création d'Évaluations :</strong> Génère des évaluations personnalisées selon la matière, le niveau ou la durée souhaitée.</li>
+        <li><strong>Création de Cours :</strong> Obtiens des supports de cours sur mesure en fonction du programme et du chapitre choisi.</li>
+        <li><strong>Création de QCM :</strong> Produit des questionnaires à choix multiples pour entraîner ou évaluer.</li>
+        <li><strong>Création d'Exercices :</strong> Génère des exercices thématiques adaptés au niveau de l’élève.</li>
+        <li><strong>Création d’Images :</strong> Illustre tes cours ou projets à l’aide de prompts IA pour créer des visuels.</li>
+        <li><strong>Image vers Texte :</strong> Récupère automatiquement le texte présent sur une image.</li>
+        <li><strong>Fiches de Révision :</strong> Synthétise les notions clés d’un chapitre en une fiche claire et efficace.</li>
+        <li><strong>Forms :</strong> Génére automatiquement des formulaires interactifs pour interroger ou recueillir des réponses.</li>
+        <li><strong>Discussion IA :</strong> Accède à une IA prête à répondre à toutes tes questions scolaires.</li>
+      </ul>
     </div>
+  </header>
 
-    <!-- Menu Overlay Vertical -->
-    <div class="overlay-menu" id="overlay-menu">
-        <ul>
-            <li><a href="../index.html">Accueil🏠</a></li>
-            <li><a href="documentation.html">Documentation📖</a></li>
-            <li><a href="about.html">À propos🎯</a></li>
-            <li><a href="contact.html">Contact💻</a></li>
-            <li><a href="bibliothèque.html">Bibliothèque IA📚</a></li>
-        </ul>
-    </div>
+  <footer>
+    &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
+  </footer>
 
-    <div class="main-content">
-
-        <!-- Titre de la page -->
-        <div class="page-header">
-            <h1>Documentation des Fonctionnalités</h1>
-            <p>Voici une liste des fonctionnalités disponibles dans l'application IApprenons.</p>
-        </div>
-
-        <!-- Liste des Fonctionnalités -->
-        <div class="features-container">
-
-            <!-- Fonctionnalités -->
-            <div class="feature-box">
-                <h2>1. Création d'Evaluation</h2>
-                <p> Outil de génération d'évaluation en fonction de vos envies ( matière, temps, difficulté ... )</p>
-                <p><strong>Exemple d'utilisation :</strong> Remplir un formulaire pour votre évaluation de mathématiques</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>2. Création de Cours</h2>
-                <p> Outil de génération de cours en fonction de vos envies ( niveau, matière, chapitre ... )</p>
-                <p><strong>Exemple d'utilisation :</strong> Remplir un formulaire pour votre cours</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>3. Création de QCM</h2>
-                <p> Outil de génération de QCM en fonction de vos envies ( niveau, matière, chapitre ... )</p>
-                <p><strong>Exemple d'utilisation :</strong> Remplir un formulaire pour la conception de votre QCM</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>4. Création d'Exercices</h2>
-                <p> Outil de génération d'exercices en fonction de vos envies ( niveau, matière, chapitre ... )</p>
-                <p><strong>Exemple d'utilisation :</strong> Remplir un formulaire pour la conception de votre exercice</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>5. Création d'Images</h2>
-                <p> Outil de génération d'images grace à un prompt ( expliquer quel image vous voulez )</p>
-                <p><strong>Exemple d'utilisation :</strong> Decrivez votre envie pour votre image</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>6. Image vers Texte</h2>
-                <p> Outil permettant de vous donner le texte présent sur une image</p>
-                <p><strong>Exemple d'utilisation :</strong> Donnez une image à lire</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>7. Fiche de Révision</h2>
-                <p> Outil de génération de fiches de révision en fonction de vos envie ( matière, chapitre, niveau ... ) </p>
-                <p><strong>Exemple d'utilisation :</strong> Remplir un formulaire pour la conception de vos fiches de révision</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>8. Forms</h2>
-                <p> Outil de génération de forms en fonction de vos envie ( matière, chapitre, niveau ... ) </p>
-                <p><strong>Exemple d'utilisation :</strong> Remplir un formulaire pour la conception de votre forms</p>
-            </div>
-
-            <div class="feature-box">
-                <h2>9. Discussion IA</h2>
-                <p> Interface d'échange avec une intelligence artificielle assistante à disposition </p>
-                <p><strong>Exemple d'utilisation :</strong> Demande d'aides pour quelconque besoin </p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Inclusion du script js -->
-    <script src="../script.js"></script>
 </body>
 </html>
