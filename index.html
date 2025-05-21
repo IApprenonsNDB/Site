@@ -67,6 +67,58 @@
     <button onclick="document.getElementById('cookie-popup').style.display='none'" style="margin-left: 10px; background: none; border: none; font-size: 1.2rem; cursor: pointer;">✖</button>
   </div>
 
+<<<<<<< HEAD
+=======
+  <!-- ===============================
+       Menu Overlay Vertical
+     =============================== -->
+  <div class="overlay-menu" id="overlay-menu">
+    <ul>
+      <li><a href="index.html">Accueil🏠</a></li>
+      <li><a href="pages/documentation.html">Documentation📖</a></li>
+      <li><a href="pages/about.html">À propos🎯</a></li>
+      <li><a href="pages/contact.html">Contact💻</a></li>
+      <li><a href="pages/bibliothèque.html">Bibliothèque IA📚</a></li>
+    </ul>
+  </div>
+
+  <!-- ===============================
+       Contenu Principal
+     =============================== -->
+  <div id="overlayImage">
+      <img src="public/b.webp" alt="Image affichée temporairement">
+  </div>
+
+  <div class="main-content">
+    <!-- Section Logo -->
+    <div class="logo-section">
+      <a class="flex flex-col items-center">
+        <img id="logo" src="public/images/logo.png" alt="Logo IApprenons" class="logo">
+      </a>
+    </div>
+
+    <!-- Boîte de Téléchargement -->
+
+    <button class="video-button-container" id="show-video-btn">Voir la vidéo tutorielle</button>
+
+    <div class="Video-tuto" id="video-container" style="display: none;">
+      <video width="560" height="315" controls>
+        <source src="public/a.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la vidéo.
+      </video>
+      <button class="close-video-button-container" id="close-video-btn">Fermer la vidéo</button>
+    </div>
+
+    <div class="inner-container">
+      <h1>Bienvenue sur <span>IApprenons</span></h1>
+      <p>Téléchargez notre application dès maintenant uniquement sur pc et mac :</p>
+
+      <button id="download-btn">Télécharger</button>
+    </div>
+  </div>
+
+  <!-- Inclusion du script js -->
+>>>>>>> 575e0b3e1cf9e759ba1615ff56d0d76c20cad07d
   <script src="script.js"></script>
 
 </body>
