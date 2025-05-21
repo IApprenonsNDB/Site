@@ -270,3 +270,107 @@ h1 span {
     border-radius: 4px;
     font-size: 0.75rem;
   }
+
+/* Styles spécifiques à la page d'accueil */
+@keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #dbeafe, #f0f9ff);
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1e40af;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #2563eb;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background: radial-gradient(circle at top left, #3b82f6 10%, transparent 40%),
+                  radial-gradient(circle at bottom right, #06b6d4 10%, transparent 40%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #1e40af;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      max-width: 600px;
+    }
+    .cta-button {
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #2563eb;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .feature img {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #e2e8f0;
+      color: #334155;
+      font-size: 0.9rem;
+    }

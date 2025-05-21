@@ -1,94 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <!-- Données principales -->
-  <meta charset="utf-8" />
-  <title>IApprenons !</title>
-  <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
-
-  <!-- Inclusion du CSS -->
-  <link rel="stylesheet" media="all" href="style.css" />
-
-  <!-- Meta données -->
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
-  <meta name="description" content="Le site internet pour installer l'application d'IApprenons !" />
-
-  <!-- Inclusion des polices depuis Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik:wght@500&family=Karla:wght@500&display=swap" rel="stylesheet"/>
-
-  <!-- Indexation google -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IApprenons",
-      "url": "https://iapprenons.fr",
-      "logo": "https://iapprenons.fr/public/images/favicon.ico"
-    }
-  </script>
+  <title>iApprenons - Appli éducative 100% gratuite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
-  <!-- ===============================
-       Bouton Menu Burger
-     =============================== -->
-  <div class="burger-menu" id="burger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
+  
+  <header>
+    <img src="images/logo.png" alt="Logo iApprenons" style="position: absolute; top: 20px; left: 40px; height: 60px;">
+
+    <nav>
+      <a href="/telechargement.html">Téléchargement</a>
+      <a href="/documentation.html">Documentation</a>
+      <a href="/bibliotheque-ia.html">Bibliothèque d'IA</a>
+      <a href="/a-propos.html">À propos</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <h1>iApprenons</h1>
+    <p>L'application éducative 100% gratuite, conçue pour les élèves et les enseignants. Disponible uniquement sur PC & MAC.</p>
+    <button class="cta-button">Télécharger maintenant</button>
+  </header>
+
+  <section class="scroll-animate">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Pourquoi choisir iApprenons ?</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/windows10.png" alt="PC" />
+        <h3>Compatible PC</h3>
+        <p>Optimisé pour Windows, pour un usage simple à l'école ou à la maison.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/fluency/96/mac-client.png" alt="Mac" />
+        <h3>Disponible sur Mac</h3>
+        <p>Entièrement compatible avec macOS, sans installation complexe.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/free.png" alt="Gratuit" />
+        <h3>100% Gratuit</h3>
+        <p>Aucune publicité, aucun abonnement. Une solution ouverte pour tous.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="scroll-animate">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Aperçu de l'application</h2>
+    <div style="text-align: center;">
+      <img src="images/capture-ecran.png" alt="Capture de l'app" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
+  </footer>
+
+  <div id="cookie-popup" style="position: fixed; bottom: 20px; right: 20px; background: #fef3c7; color: #78350f; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Inter', sans-serif; display: flex; align-items: center; gap: 10px;">
+    <img src="https://img.icons8.com/emoji/48/cookie-emoji.png" alt="cookie" style="height: 40px;">
+    <div>
+      <strong>Pas de panique !</strong><br />
+      Nous ne collectons pas de cookies 🍪
+    </div>
+    <button onclick="document.getElementById('cookie-popup').style.display='none'" style="margin-left: 10px; background: none; border: none; font-size: 1.2rem; cursor: pointer;">✖</button>
   </div>
 
-  <!-- ===============================
-       Menu Overlay Vertical
-     =============================== -->
-  <div class="overlay-menu" id="overlay-menu">
-    <ul>
-      <li><a href="index.html">Accueil🏠</a></li>
-      <li><a href="pages/documentation.html">Documentation📖</a></li>
-      <li><a href="pages/about.html">À propos🎯</a></li>
-      <li><a href="pages/contact.html">Contact💻</a></li>
-      <li><a href="pages/bibliothèque.html">Bibliothèque IA📚</a></li>
-    </ul>
-  </div>
-
-  <!-- ===============================
-       Contenu Principal
-     =============================== -->
-  <div class="main-content">
-    <!-- Section Logo -->
-    <div class="logo-section">
-      <a class="flex flex-col items-center">
-        <img src="public/images/logo.png" alt="Logo IApprenons" class="logo">
-      </a>
-    </div>
-
-    <!-- Boîte de Téléchargement -->
-
-    <button class="video-button-container" id="show-video-btn">Voir la vidéo tutorielle</button>
-
-    <div class="Video-tuto" id="video-container" style="display: none;">
-      <video width="560" height="315" controls>
-        <source src="public/a.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la vidéo.
-      </video>
-      <button class="video-button-container" id="close-video-btn">Fermer la vidéo</button>
-    </div>
-
-    <div class="inner-container">
-      <h1>Bienvenue sur <span>IApprenons</span></h1>
-      <p>Téléchargez notre application dès maintenant :</p>
-
-      <button id="download-btn">Télécharger</button>
-    </div>
-  </div>
-
-  <!-- Inclusion du script js -->
   <script src="script.js"></script>
-</body>
 
+</body>
 </html>
