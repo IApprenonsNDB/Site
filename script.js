@@ -52,27 +52,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Lecture vidéo
+  // Lecture vidéo style popup
   const showVideoBtn = document.getElementById("show-video-btn");
-  const videoContainer = document.getElementById("video-container");
+  const videoPopup = document.getElementById("video-popup");
   const closeVideoBtn = document.getElementById("close-video-btn");
+  const video = document.getElementById("video");
 
-  if (showVideoBtn && videoContainer && closeVideoBtn) {
-    const video = videoContainer.querySelector('video');
-
+  if (showVideoBtn && videoPopup && closeVideoBtn && video) {
     showVideoBtn.addEventListener('click', function () {
-      videoContainer.style.display = 'block';
-      showVideoBtn.style.display = 'none';
-      if (video) video.play();
+      videoPopup.style.display = 'block';
+      video.play();
     });
 
     closeVideoBtn.addEventListener('click', function () {
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
-      videoContainer.style.display = 'none';
-      showVideoBtn.style.display = 'inline-block';
+      video.pause();
+      video.currentTime = 0;
+      videoPopup.style.display = 'none';
     });
   }
 

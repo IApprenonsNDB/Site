@@ -39,7 +39,8 @@
         <p>Optimisé pour Windows, pour un usage simple à l'école ou à la maison.</p>
       </div>
       <div class="feature">
-        <img src="public/images/video.png" alt="Mac" />
+        <img src="public/images/video.png" alt="Lire la vidéo" id="show-video-btn" style="cursor: pointer; width: 60px;">
+        
         <h3> Facile à utiliser</h3>
         <p> Regardez notre vidéo tutorielle ! </p>
       </div>
@@ -72,5 +73,14 @@
   </div>
   <script src="script.js"></script>
 
+
+  <div id="video-popup">
+    <video id="video" controls>
+      <source src="public/a.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la lecture vidéo.
+    </video>
+    <button id="close-video-btn">✖</button>
+  </div>
 </body>
+
 </html>

@@ -384,3 +384,35 @@ h1 span {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Popup vidéo stylé */
+
+#video-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fef3c7;
+  color: #1f2937;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 1000;
+  max-width: 360px;
+}
+#video-popup video {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#close-video-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #1f2937;
+  cursor: pointer;
+}
