@@ -13,6 +13,13 @@
 </head>
 <body>
   
+  <script>
+    if (window.innerWidth <= 1000 || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      // Redirection si l'utilisateur est sur mobile
+      window.location.href = "pages/mobile.html";
+    }
+  </script>
+
   <header>
 
     <nav>
