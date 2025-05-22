@@ -11,6 +11,53 @@ body, body.bg {
 }
 
 /* ===============================
+   🔍 Adaptations Mobile (écrans <= 768px)
+   =============================== */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  header img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    color: #1e40af;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    line-height: 1.4;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    max-width: 100vw;
+    max-height: 40vh; /* ✅ limite la hauteur à 40% de la hauteur écran */
+    display: block;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  header {
+    padding-bottom: 1rem;
+    overflow: hidden; /* ✅ évite le débordement */
+  }
+}
+
+
+/* ===============================
    Contenu Principal
    =============================== */
 .main-content {
