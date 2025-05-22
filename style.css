@@ -1,3 +1,12 @@
+#library {
+  /*min-height: 800px;*/
+  transition: all 0.3s ease;
+}
+.ia-section {
+  transition: min-height 0.3s ease;
+  /*min-height: 1700px;*/
+}
+
 /* ===============================
    Réinitialisation et Fond général
    =============================== */
@@ -253,8 +262,8 @@ h1 span {
     font-size: 1rem;
     border-radius: 8px;
     border: none;
-    background-color: #2d3748;
-    color: #ffffff;
+    background-color: #d3e3ff;
+    color: #1e3a8a;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   }
   
@@ -299,7 +308,7 @@ h1 span {
 .item h3 {
     margin: 10px 0 8px;
     font-size: 1.1rem;
-    color: #ffffff;
+    color: #1e3a8a;
   }
   
 .keywords {
