@@ -1,237 +1,262 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon"/>
-  <title>Bibliothèque IA</title>
-  <link rel="stylesheet" media="all" href="../style.css" />
+  <meta charset="UTF-8" />
+  <title>Bibliothèque IA - iApprenons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="iapprenons,nsi,ndbellegarde,ia" />
-  <meta name="description" content="Le site internet pour installer l'application d'IApprenons !" />
+  <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .ia-section {
+      max-width: 1000px;
+      margin: 8rem auto 4rem;
+      padding: 3rem 2rem;
+      background-color: #f9fafb;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .item {
+      background-color: #eef6ff;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .item:hover {
+      transform: translateY(-4px);
+    }
+    .scroll-arrow {
+      width: 40px;
+      height: 40px;
+      margin: 40px auto 0;
+      border-left: 4px solid #1e3a8a;
+      border-bottom: 4px solid #7294f1;
+      transform: rotate(-45deg);
+      animation: bounceDown 1.5s infinite;
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+      }
+      50% {
+        transform: translateY(12px) rotate(-45deg);
+      }
+    }
+  </style>
 </head>
-<body>
-  <div class="burger-menu" id="burger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
+<body style="background-color: #f9fafb; margin: 0; padding: 0;">
+
+  <header style="padding: 2rem 1rem 1rem; background-color: #f9fafb; position: relative;">
+    <img src="../public/images/logo.png" alt="Logo iApprenons" style="position: absolute; top: 20px; left: 40px; height: 60px;">
+    <nav style="margin-bottom: 6rem; text-align: center;">
+      <a href="../index.html">Accueil</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="bibliothèque.html">Bibliothèque d'IA</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <h1 style="text-align: center; font-size: 2.5rem; margin: 0;">Bibliothèque d'IA</h1>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="#ia-section" style="display: inline-block;">
+        <div class="scroll-arrow"></div>
+      </a>
+    </div>
+  </header>
+
+  <div class="ia-section" id="ia-section" style="margin-top: 6rem; padding: 3rem 2rem;">
+    <input type="text" id="searchBar" placeholder="🔍 Cherche un mot-clé..." style="width: 100%; padding: 0.75rem 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 0.5rem; margin-bottom: 2rem;">
+    <div class="grid" id="library"></div>
   </div>
 
-  <!-- ===============================
-       Menu Overlay Vertical
-     =============================== -->
-  <div class="overlay-menu" id="overlay-menu">
-    <ul>
-      <li><a href="../index.html">Accueil🏠</a></li>
-      <li><a href="documentation.html">Documentation📖</a></li>
-      <li><a href="about.html">À propos🎯</a></li>
-      <li><a href="contact.html">Contact💻</a></li>
-      <li><a href="bibliothèque.html">Bibliothèque IA 📚</a></li>
-    </ul>
-  </div>
-
-  <h1>Bibliothèque IA</h1>
-  <input type="text" id="searchBar" placeholder="🔍 Cherche un mot-clé...">
-
-  <div class="grid" id="library">
-    <!-- Les blocs seront injectés ici -->
-  </div>
+  <footer style="text-align: center; padding: 2rem 1rem;">
+    &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
+  </footer>
 
   <script>
     const items = [
-  {
-    logo: "../public/images/mistral.png",
-    titre: "Mistral",
-    motsCles: ["chat", "assistant", "texte", "chatbat", "generative"],
-    lien: "https://chat.mistral.ai/chat"
-  },
-  {
-    logo: "../public/images/deepseek.png",
-    titre: "Deepseek",
-    motsCles: ["chat", "assistant", "texte", "chatbot", "generative"],
-    lien: "https://www.deepseek.com/"
-  },
-  {
-    logo: "../public/images/ideogram.png",
-    titre: "Ideogram",
-    motsCles: ["image", "photo", "dessin", "peinture", "generative"],
-    lien: "https://ideogram.ai/t/explore"
-  },
-  {
-    logo: "../public/images/suno.png",
-    titre: "Suno",
-    motsCles: ["music", "chanson", "parole", "melodie", "generative"],
-    lien: "https://suno.com/home"
-  },
-  {
-    logo: "../public/images/kimi.png",
-    titre: "Kimi",
-    motsCles: ["chat", "assistant", "texte", "chatbat", "generative"],
-    lien: "https://kimi.ai/"
-  },
-  {
-    logo: "../public/images/lucie.png",
-    titre: "Lucie",
-    motsCles: ["rire"],
-    lien: "https://lucie.chat/"
-  },
-    {
-    logo: "../public/images/chatgpt.png",
-    titre: "ChatGPT",
-    motsCles: ["chat", "assistant", "texte", "génératif"],
-    lien: "https://chat.openai.com/"
-  },
-  {
-    logo: "../public/images/deepl.png",
-    titre: "DeepL",
-    motsCles: ["traduction", "texte", "langue", "génératif"],
-    lien: "https://www.deepl.com/"
-  },
-  {
-    logo: "../public/images/perplexity.png",
-    titre: "Perplexity AI",
-    motsCles: ["recherche", "assistant", "information", "génératif"],
-    lien: "https://www.perplexity.ai/"
-  },
-  {
-    logo: "../public/images/claude.png",
-    titre: "Claude",
-    motsCles: ["chat", "assistant", "texte", "génératif"],
-    lien: "https://claude.ai/"
-  },
-  {
-    logo: "../public/images/poe.png",
-    titre: "Poe",
-    motsCles: ["chat", "assistant", "texte", "génératif"],
-    lien: "https://poe.com/"
-  },
-  {
-    logo: "../public/images/elevenlabs.png",
-    titre: "ElevenLabs",
-    motsCles: ["audio", "voix", "synthèse", "génératif"],
-    lien: "https://elevenlabs.io/"
-  },
-  {
-    logo: "../public/images/gamma.png",
-    titre: "Gamma",
-    motsCles: ["powerpoint", "présentation", "documents", "site web", "génératif"],
-    lien: "https://gamma.app/"
-  },
-  {
-    logo: "../public/images/grammarly.png",
-    titre: "Grammarly",
-    motsCles: ["écriture", "grammaire", "correction", "texte"],
-    lien: "https://www.grammarly.com/"
-  },
-  {
-    logo: "../public/images/dall-e.png",
-    titre: "DALL·E",
-    motsCles: ["image", "génération", "art", "génératif"],
-    lien: "https://openai.com/dall-e/"
-  },
-  {
-    logo: "../public/images/midjourney.png",
-    titre: "Midjourney",
-    motsCles: ["image", "génération", "art", "génératif"],
-    lien: "https://www.midjourney.com/"
-  },
-  {
-    logo: "../public/images/stabilityai.png",
-    titre: "Stable Diffusion",
-    motsCles: ["image", "génération", "art", "génératif"],
-    lien: "https://stability.ai/"
-  },
-  {
-    logo: "../public/images/anthropic.png",
-    titre: "Anthropic",
-    motsCles: ["chat", "assistant", "IA", "sécurité"],
-    lien: "https://www.anthropic.com/"
-  },
-  {
-    logo: "../public/images/gemini.png",
-    titre: "Google Gemini",
-    motsCles: ["chat", "assistant", "texte", "génératif"],
-    lien: "https://gemini.google.com/"
-  },
-  {
-    logo: "../public/images/copilot.png",
-    titre: "Microsoft Copilot",
-    motsCles: ["code", "assistant", "programmation", "génératif"],
-    lien: "https://copilot.microsoft.com/"
-  },
-  {
-    logo: "../public/images/deepai.png",
-    titre: "DeepAI",
-    motsCles: ["image", "texte", "génération", "génératif"],
-    lien: "https://deepai.org/"
-  },
-  {
-    logo: "../public/images/whisper.png",
-    titre: "Whisper",
-    motsCles: ["audio", "transcription", "voix", "génératif"],
-    lien: "https://openai.com/index/whisper/"
-  },
-  {
-    logo: "../public/images/wizard.png",
-    titre: "Quiz Wizard",
-    motsCles: ["QCM", "flashcard", "cours", "génératif"],
-    lien: "https://www.getquizwizard.com/"
-   },
-    {
-      logo: "../public/images/secret.png",
-      titre: "CTPWM",
-      motsCles: ["secret"],
-      lien: "https://example.com/secret",
-      special: true
-    },
-  ];
-
-  const container = document.getElementById("library");
-  const searchBar = document.getElementById("searchBar");
-
-  function renderItems(filter = "") {
-    container.innerHTML = "";
-    
-    // On découpe le filtre en mots pour les éléments non-spéciaux
-    const searchTerms = filter.toLowerCase().split(" ").filter(Boolean);
-
-    const filtered = items.filter(item => {
-      // Si l'élément a la propriété 'special'
-      if (item.special) {
-        // On affiche l'élément uniquement si la saisie correspond exactement à son titre (sans espaces superflus et en ignorant la casse)
-        return filter.trim().toLowerCase() === item.titre.toLowerCase();
+      {
+        logo: "../public/images/mistral.png",
+        titre: "Mistral",
+        motsCles: ["chat", "assistant", "texte", "chatbat", "generative"],
+        lien: "https://chat.mistral.ai/chat"
+      },
+      {
+        logo: "../public/images/deepseek.png",
+        titre: "Deepseek",
+        motsCles: ["chat", "assistant", "texte", "chatbot", "generative"],
+        lien: "https://www.deepseek.com/"
+      },
+      {
+        logo: "../public/images/ideogram.png",
+        titre: "Ideogram",
+        motsCles: ["image", "photo", "dessin", "peinture", "generative"],
+        lien: "https://ideogram.ai/t/explore"
+      },
+      {
+        logo: "../public/images/suno.png",
+        titre: "Suno",
+        motsCles: ["music", "chanson", "parole", "melodie", "generative"],
+        lien: "https://suno.com/home"
+      },
+      {
+        logo: "../public/images/kimi.png",
+        titre: "Kimi",
+        motsCles: ["chat", "assistant", "texte", "chatbat", "generative"],
+        lien: "https://kimi.ai/"
+      },
+      {
+        logo: "../public/images/lucie.png",
+        titre: "Lucie",
+        motsCles: ["rire"],
+        lien: "https://lucie.chat/"
+      },
+      {
+        logo: "../public/images/chatgpt.png",
+        titre: "ChatGPT",
+        motsCles: ["chat", "assistant", "texte", "génératif"],
+        lien: "https://chat.openai.com/"
+      },
+      {
+        logo: "../public/images/deepl.png",
+        titre: "DeepL",
+        motsCles: ["traduction", "texte", "langue", "génératif"],
+        lien: "https://www.deepl.com/"
+      },
+      {
+        logo: "../public/images/perplexity.png",
+        titre: "Perplexity AI",
+        motsCles: ["recherche", "assistant", "information", "génératif"],
+        lien: "https://www.perplexity.ai/"
+      },
+      {
+        logo: "../public/images/claude.png",
+        titre: "Claude",
+        motsCles: ["chat", "assistant", "texte", "génératif"],
+        lien: "https://claude.ai/"
+      },
+      {
+        logo: "../public/images/poe.png",
+        titre: "Poe",
+        motsCles: ["chat", "assistant", "texte", "génératif"],
+        lien: "https://poe.com/"
+      },
+      {
+        logo: "../public/images/elevenlabs.png",
+        titre: "ElevenLabs",
+        motsCles: ["audio", "voix", "synthèse", "génératif"],
+        lien: "https://elevenlabs.io/"
+      },
+      {
+        logo: "../public/images/gamma.png",
+        titre: "Gamma",
+        motsCles: ["powerpoint", "présentation", "documents", "site web", "génératif"],
+        lien: "https://gamma.app/"
+      },
+      {
+        logo: "../public/images/grammarly.png",
+        titre: "Grammarly",
+        motsCles: ["écriture", "grammaire", "correction", "texte"],
+        lien: "https://www.grammarly.com/"
+      },
+      {
+        logo: "../public/images/dall-e.png",
+        titre: "DALL·E",
+        motsCles: ["image", "génération", "art", "génératif"],
+        lien: "https://openai.com/dall-e/"
+      },
+      {
+        logo: "../public/images/midjourney.png",
+        titre: "Midjourney",
+        motsCles: ["image", "génération", "art", "génératif"],
+        lien: "https://www.midjourney.com/"
+      },
+      {
+        logo: "../public/images/stabilityai.png",
+        titre: "Stable Diffusion",
+        motsCles: ["image", "génération", "art", "génératif"],
+        lien: "https://stability.ai/"
+      },
+      {
+        logo: "../public/images/anthropic.png",
+        titre: "Anthropic",
+        motsCles: ["chat", "assistant", "IA", "sécurité"],
+        lien: "https://www.anthropic.com/"
+      },
+      {
+        logo: "../public/images/gemini.png",
+        titre: "Google Gemini",
+        motsCles: ["chat", "assistant", "texte", "génératif"],
+        lien: "https://gemini.google.com/"
+      },
+      {
+        logo: "../public/images/copilot.png",
+        titre: "Microsoft Copilot",
+        motsCles: ["code", "assistant", "programmation", "génératif"],
+        lien: "https://copilot.microsoft.com/"
+      },
+      {
+        logo: "../public/images/deepai.png",
+        titre: "DeepAI",
+        motsCles: ["image", "texte", "génération", "génératif"],
+        lien: "https://deepai.org/"
+      },
+      {
+        logo: "../public/images/whisper.png",
+        titre: "Whisper",
+        motsCles: ["audio", "transcription", "voix", "génératif"],
+        lien: "https://openai.com/index/whisper/"
+      },
+      {
+        logo: "../public/images/wizard.png",
+        titre: "Quiz Wizard",
+        motsCles: ["QCM", "flashcard", "cours", "génératif"],
+        lien: "https://www.getquizwizard.com/"
+      },
+      {
+        logo: "../public/images/secret.png",
+        titre: "CTPWM",
+        motsCles: ["secret"],
+        lien: "https://example.com/secret",
+        special: true
       }
-      // Pour les autres éléments, on conserve le filtrage normal
-      const allText = [
-        item.titre.toLowerCase(),
-        ...item.motsCles.map(m => m.toLowerCase())
-      ].join(" ");
-      return searchTerms.every(term => allText.includes(term));
-    });
+    ];
 
-    filtered.forEach(item => {
-      const a = document.createElement("a");
-      a.className = "item";
-      a.href = item.lien;
-      a.target = "_blank";
-      a.innerHTML = `
-        <img src="${item.logo}" alt="logo">
-        <h3>${item.titre}</h3>
-        <div class="keywords">
-          ${item.motsCles.map(m => `<span>${m}</span>`).join("")}
-        </div>
-      `;
-      container.appendChild(a);
-    });
-  }
+    const container = document.getElementById("library");
+    const searchBar = document.getElementById("searchBar");
 
-  searchBar.addEventListener("input", e => {
-    renderItems(e.target.value);
-  });
+    function renderItems(filter = "") {
+      container.innerHTML = "";
+      const searchTerms = filter.toLowerCase().split(" ").filter(Boolean);
 
-  renderItems();
-</script>
+      const filtered = items.filter(item => {
+        if (item.special) {
+          return filter.trim().toLowerCase() === item.titre.toLowerCase();
+        }
+        const allText = [item.titre.toLowerCase(), ...item.motsCles.map(m => m.toLowerCase())].join(" ");
+        return searchTerms.every(term => allText.includes(term));
+      });
 
-  <!-- Inclusion du script js -->
-  <script src="../script.js"></script>
+      filtered.forEach(item => {
+        const a = document.createElement("a");
+        a.className = "item";
+        a.href = item.lien;
+        a.target = "_blank";
+        a.innerHTML = `
+          <img src="${item.logo}" alt="logo">
+          <h3>${item.titre}</h3>
+          <div class="keywords">
+            ${item.motsCles.map(m => `<span>${m}</span>`).join("")}
+          </div>
+        `;
+        container.appendChild(a);
+      });
+    }
+
+    searchBar.addEventListener("input", e => renderItems(e.target.value));
+    renderItems();
+  </script>
 </body>
 </html>
