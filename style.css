@@ -22,7 +22,16 @@ body, body.bg {
     color: #ffffff;
     text-align: center;
 }
-
+.feature-box {
+  text-align: center; /* ✅ Centre tout dans la boîte */
+}
+.feature-box h2,
+.feature-box p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px
+  text-align: left; /* ✅ Limite la largeur pour lisibilité */
+}
 /* ===============================
    🔍 Adaptations Mobile (écrans <= 768px)
    =============================== */

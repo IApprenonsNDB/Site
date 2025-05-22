@@ -8,6 +8,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js"></script>
+
+  <style>
+    .scroll-arrow {
+      width: 40px;
+      height: 40px;
+      margin: 40px auto 0;
+      border-left: 4px solid #1e3a8a;
+      border-bottom: 4px solid #7294f1;
+      transform: rotate(-45deg);
+      animation: bounceDown 1.5s infinite;
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+      }
+      50% {
+        transform: translateY(12px) rotate(-45deg);
+      }
+    }
+
+    .about-box {
+      background-color: #91c8ff;
+      color: #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-box p {
+      font-size: 1.05rem;
+      color: #000000;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin-top: 3rem;
+      font-size: 2.2rem;
+      text-align: center;
+      color: #1e3a8a;
+    }
+  </style>
 </head>
 <body>
 
@@ -15,29 +62,29 @@
     <img src="../public/images/logo.png" alt="Logo iApprenons" style="position: absolute; top: 20px; left: 40px; height: 60px;">
     <nav>
       <a href="../index.html">Accueil</a>
-      <a href="documentation.html">Documentation</a>
+      <a href="documentation.html">Fonctionnalités</a>
       <a href="bibliothèque.html">Bibliothèque d'IA</a>
       <a href="contact.html">Contact</a>
+      <a href="FAQ.html">FAQ</a>
     </nav>
     <h1>À propos d'iApprenons</h1>
-    <p>Découvrez comment est né ce projet éducatif pensé pour les élèves.</p>
-
-    <div style="
-      max-width: 2500px;
-      margin: .5rem auto;
-      padding: .5rem 15rem;
-      border-radius: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.2;
-      color: #333;
-    ">
-      <p><strong>IApprenons</strong>, c’est l’histoire d’un projet né d’une envie simple : utiliser nos compétences en informatique pour créer quelque chose d’utile, accessible et intelligent.</p>
-      <p>Tout a commencé en cours de NSI. On avait tous cette même idée en tête : pourquoi ne pas construire une application qui aide vraiment les élèves dans leur quotidien scolaire ?</p>
-      <p>Petit à petit, l’idée a pris forme. On a designé une interface simple, développé des fonctionnalités utiles, corrigé des bugs... beaucoup de bugs.</p>
-      <p>Ce projet, c’est plus qu’un exercice de programmation. C’est une application qu’on aurait aimé avoir pour nous-mêmes.</p>
-      <p>Aujourd’hui, on est fiers de pouvoir la partager avec d’autres élèves.</p>
+    <p style="margin: 0 auto; max-width: 700px;">Découvrez comment est né ce projet éducatif pensé pour les élèves.</p>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="#about-content" style="display: inline-block;">
+        <div class="scroll-arrow"></div>
+      </a>
     </div>
   </header>
+
+  <main id="about-content">
+    <div class="about-box" style="text-align: center;">
+      <p style="margin: 0 auto; max-width: 700px;"><strong>IApprenons</strong>, c’est l’histoire d’un projet né d’une envie simple : utiliser nos compétences en informatique pour créer quelque chose d’utile, accessible et intelligent.</p>
+      <p style="margin: 0 auto; max-width: 700px;">Tout a commencé en cours de NSI. On avait tous cette même idée en tête : pourquoi ne pas construire une application qui aide vraiment les élèves dans leur quotidien scolaire ?</p>
+      <p style="margin: 0 auto; max-width: 700px;">Petit à petit, l’idée a pris forme. On a designé une interface simple, développé des fonctionnalités utiles, corrigé des bugs... beaucoup de bugs.</p>
+      <p style="margin: 0 auto; max-width: 700px;">Ce projet, c’est plus qu’un exercice de programmation. C’est une application qu’on aurait aimé avoir pour nous-mêmes.</p>
+      <p style="margin: 0 auto; max-width: 700px;">Aujourd’hui, on est fiers de pouvoir la partager avec d’autres élèves.</p>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
