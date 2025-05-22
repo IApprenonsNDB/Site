@@ -4,44 +4,91 @@
   <meta charset="UTF-8" />
   <title>Contact - iApprenons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="public/images/favicon.ico" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <script src="../script.js"></script>
+  <style>
+    header {
+      padding-bottom: 3rem;
+    }
+
+    .features {
+      margin-top: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 260px;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    .feature img {
+      height: 48px;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #1e293b;
+    }
+
+    .feature p {
+      font-size: 0.95rem;
+      color: #2563eb;
+      word-break: break-word;
+    }
+
+    h2 {
+      color: #1e293b;
+      font-size: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <img src="../public/images/logo.png" alt="Logo iApprenons" style="position: absolute; top: 20px; left: 40px; height: 60px;">
     <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="documentation.html">Documentation</a>
-      <a href="bibliothèque.html">Bibliothèque d'IA</a>
-      <a href="about.html">À propos</a>
+      <a href="index.html">Accueil</a>
+      <a href="pages/documentation.html">Documentation</a>
+      <a href="pages/bibliothèque.html">Bibliothèque IA</a>
+      <a href="pages/about.html">À propos</a>
     </nav>
-    <h1>Contact</h1>
-    <p>Une question ? Une idée ? Contacte l'équipe iApprenons !</p>
 
-    <div style="
-      max-width: 900px;
-      margin: .5rem auto;
-      padding: .5rem 4rem;
-      border-radius: 1rem;
-      font-size: 1.05rem;
-      line-height: 1;
-      color: #333;
-    ">
-      <p><strong>📧 E-mail :</strong> <a href="mailto:iandb@ndbellegarde.net" style="color: #1e90ff;">iandb@ndbellegarde.net</a></p>
-      <p><strong>🌐 Site officiel :</strong> <a href="https://iapprenons.fr" target="_blank" style="color: #1e90ff;">www.iapprenons.fr</a></p>
-      <p><strong>🏫 Projet :</strong> Réalisé par l'équipe NSI du Lycée Notre-Dame de Bellegarde</p>
-
-      <br>
-      <h2 style="margin-top: 1.5rem;">Réseaux sociaux</h2>
-      <p>Suivez-nous pour rester informé :</p>
-      <p>
-        <a href="https://instagram.com/iapprenons" target="_blank" style="color: #1e90ff;">📸 Instagram</a><br>
-        <a href="https://github.com/IApprenonsNDB/Site" target="_blank" style="color: #1e90ff;">💻 GitHub</a>
-      </p>
+    <h2>Contactez-nous</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/emoji/48/e-mail.png" alt="email" />
+        <h3>E-mail</h3>
+        <p><a href="mailto:iandb@ndbellegarde.net">iandb@ndbellegarde.net</a></p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/domain.png" alt="site" />
+        <h3>Site officiel</h3>
+        <p><a href="https://iapprenons.fr" target="_blank">www.iapprenons.fr</a></p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram" />
+        <h3>Instagram</h3>
+        <p><a href="https://instagram.com/iapprenons" target="_blank">@iapprenons</a></p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/material-outlined/48/github.png" alt="github" />
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/IApprenonsNDB/Site" target="_blank">/IApprenonsNDB</a></p>
+      </div>
     </div>
   </header>
 
