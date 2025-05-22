@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>FAQ - iApprenons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../public/images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js"></script>
+
+  <style>
+    .scroll-arrow {
+      width: 40px;
+      height: 40px;
+      margin: 40px auto 0;
+      border-left: 4px solid #1e3a8a;
+      border-bottom: 4px solid #7294f1;
+      transform: rotate(-45deg);
+      animation: bounceDown 1.5s infinite;
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+      }
+      50% {
+        transform: translateY(12px) rotate(-45deg);
+      }
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .faq-box {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .faq-box h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: #1e3a8a;
+    }
+
+    .faq-box p {
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-top: 3rem;
+      font-size: 2.2rem;
+      text-align: center;
+      color: #1e3a8a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="bibliothèque.html">Bibliothèque IA</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="FAQ.html" class="active">FAQ</a>
+    </nav>
+
+    <h1>Foire Aux Questions</h1>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="#faq-content" style="display: inline-block;">
+        <div class="scroll-arrow"></div>
+      </a>
+    </div>
+  </header>
+
+  <main class="faq-container" id="faq-content">
+    <div class="faq-box">
+      <h2>L'application fonctionne-t-elle sans connexion internet ?</h2>
+      <p>Oui ! Une fois installée sur votre ordinateur, iApprenons fonctionne entièrement hors ligne. Toutes les fonctionnalités sont disponibles sans accès Internet.</p>
+    </div>
+
+    <div class="faq-box">
+      <h2>Pourquoi ce choix de fonctionner localement ?</h2>
+      <p>Pour des raisons de sécurité, de rapidité, et surtout pour respecter votre vie privée. Aucune donnée ne quitte votre appareil.</p>
+    </div>
+
+    <div class="faq-box">
+      <h2>iApprenons est-il respectueux de l’environnement ?</h2>
+      <p>Oui, iApprenons ne dépend pas de serveurs distants gourmands en énergie. Le calcul se fait localement, réduisant fortement l’empreinte carbone.</p>
+    </div>
+
+    <div class="faq-box">
+      <h2>L'application est-elle gratuite ?</h2>
+      <p>Absolument. Aucune publicité, aucun abonnement. iApprenons est un projet éducatif libre et ouvert à tous.</p>
+    </div>
+
+    <div class="faq-box">
+      <h2>Sur quels appareils fonctionne iApprenons ?</h2>
+      <p>Actuellement, iApprenons est compatible uniquement avec les ordinateurs Windows. Une version sera peut-être compatbile pour MAC. Une version mobile n’est pas prévue.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
+  </footer>
+
+</body>
+</html>
