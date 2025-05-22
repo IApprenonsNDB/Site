@@ -8,6 +8,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <script src="../script.js"></script>
+
+<style>
+.scroll-arrow {
+  width: 40px;
+  height: 40px;
+  margin: 40px auto 0;
+  border-left: 4px solid #1e3a8a;
+  border-bottom: 4px solid #7294f1;
+  transform: rotate(-45deg);
+  animation: bounceDown 1.5s infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-45deg);
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -21,29 +43,53 @@
     </nav>
     <h1>Documentation des fonctionnalités</h1>
     <p>Explore toutes les possibilités offertes par iApprenons !</p>
-
-    <div style="
-      max-width: 900px;
-      margin: .5rem auto;
-      padding: .75rem 4rem;
-      border-radius: 1rem;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #333;
-    ">
-      <ul style="padding-left: 1.5rem; list-style: none;">
-        <li><strong>Création d'Évaluations :</strong> Génère des évaluations personnalisées selon la matière, le niveau ou la durée souhaitée.</li>
-        <li><strong>Création de Cours :</strong> Obtiens des supports de cours sur mesure en fonction du programme et du chapitre choisi.</li>
-        <li><strong>Création de QCM :</strong> Produit des questionnaires à choix multiples pour entraîner ou évaluer.</li>
-        <li><strong>Création d'Exercices :</strong> Génère des exercices thématiques adaptés au niveau de l’élève.</li>
-        <li><strong>Création d’Images :</strong> Illustre tes cours ou projets à l’aide de prompts IA pour créer des visuels.</li>
-        <li><strong>Image vers Texte :</strong> Récupère automatiquement le texte présent sur une image.</li>
-        <li><strong>Fiches de Révision :</strong> Synthétise les notions clés d’un chapitre en une fiche claire et efficace.</li>
-        <li><strong>Forms :</strong> Génére automatiquement des formulaires interactifs pour interroger ou recueillir des réponses.</li>
-        <li><strong>Discussion IA :</strong> Accède à une IA prête à répondre à toutes tes questions scolaires.</li>
-      </ul>
+  
+    <div style="margin-top: 3rem; text-align: center;">
+      <div class="scroll-arrow"></div>
     </div>
   </header>
+    
+
+  <main class="main-content">
+    <div class="features-container">
+      <div class="feature-box">
+        <h2>Création d'Évaluations</h2>
+        <p>Génère des évaluations personnalisées selon la matière, le niveau ou la durée souhaitée.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Création de Cours</h2>
+        <p>Obtiens des supports de cours sur mesure en fonction du programme et du chapitre choisi.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Création de QCM</h2>
+        <p>Produit des questionnaires à choix multiples pour entraîner ou évaluer.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Création d'Exercices</h2>
+        <p>Génère des exercices thématiques adaptés au niveau de l’élève.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Création d’Images</h2>
+        <p>Illustre tes cours ou projets à l’aide de prompts IA pour créer des visuels.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Image vers Texte</h2>
+        <p>Récupère automatiquement le texte présent sur une image.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Fiches de Révision</h2>
+        <p>Synthétise les notions clés d’un chapitre en une fiche claire et efficace.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Forms</h2>
+        <p>Génére automatiquement des formulaires interactifs pour interroger ou recueillir des réponses.</p>
+      </div>
+      <div class="feature-box">
+        <h2>Discussion IA</h2>
+        <p>Accède à une IA prête à répondre à toutes tes questions scolaires.</p>
+      </div>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
