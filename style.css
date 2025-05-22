@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #library {
   /*min-height: 800px;*/
   transition: all 0.3s ease;
