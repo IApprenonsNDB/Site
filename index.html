@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,87 +9,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-
-
 </head>
 <body>
-  
-  <script>
-    if (window.innerWidth <= 1000 || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      // Redirection si l'utilisateur est sur mobile
-      window.location.href = "pages/mobile.html";
-    }
-  </script>
 
-  <header>
+<header>
+  <nav>
+    <a href="pages/documentation.html">Fonctionnalités</a>
+    <a href="pages/bibliothèque.html">Bibliothèque d'IA</a>
+    <a href="pages/about.html">À propos</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="pages/contact.html">Contact</a>
+    <a href="pages/FAQ.html">FAQ</a>
+  </nav>
+  <img src="public/images/favicon.ico" alt="Logo iApprenons" style="height: 180px; margin-bottom: 1rem;">
+  <h1>iApprenons</h1>
+  <p>L'application éducative 100% gratuite, conçue pour les élèves et les enseignants. Disponible uniquement sur PC et en français.</p>
+  <button id="download-btn" class="cta-button">Télécharger maintenant</button>
+</header>
 
-    <nav>
-      <a href="pages/documentation.html">Fonctionnalités</a>
-      <a href="pages/bibliothèque.html">Bibliothèque d'IA</a>
-      <a href="pages/about.html">À propos</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="pages/contact.html">Contact</a>
-      <a href="pages/FAQ.html">FAQ</a>
-    </nav>
-    <img src="public/images/favicon.ico" alt="Logo iApprenons" style="height: 180px; margin-bottom: 1rem;">
-
-
-    <h1>iApprenons</h1>
-    <p>L'application éducative 100% gratuite, conçue pour les élèves et les enseignants. Disponible uniquement sur PC et en français.</p>
-    <button id="download-btn" class="cta-button">Télécharger maintenant</button>
-  </header>
-
-  <section class="scroll-animate">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Pourquoi choisir iApprenons ?</h2>
-    <div class="features">
-      <div class="feature">
-        <img src="public/images/pc.png" alt="PC" />
-        <h3>Compatible PC</h3>
-        <p>Optimisé pour Windows, pour un usage simple à l'école ou à la maison.</p>
-      </div>
-      <div class="feature">
-        <img src="public/images/video.png" alt="Lire la vidéo" id="show-video-btn" style="cursor: pointer; width: 60px;">
-        
-        <h3> Facile à utiliser</h3>
-        <p> Regardez notre vidéo tutorielle ! </p>
-      </div>
-      <div class="feature">
-        <img src="public/images/gratuit.png" alt="Gratuit" />
-        <h3>100% Gratuit</h3>
-        <p>Aucune publicité, aucun abonnement. Une solution ouverte pour tous.</p>
-      </div>
+<section class="scroll-animate">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Pourquoi choisir iApprenons ?</h2>
+  <div class="features">
+    <div class="feature">
+      <img src="public/images/pc.png" alt="PC" />
+      <h3>Compatible PC</h3>
+      <p>Optimisé pour Windows, pour un usage simple à l'école ou à la maison.</p>
     </div>
-  </section>
-
-  <section class="scroll-animate">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Aperçu de l'application</h2>
-    <div style="text-align: center;">
-      <img src="public/images/appli.png" alt="Capture de l'app" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+    <div class="feature">
+      <img src="public/images/video.png" alt="Lire la vidéo" id="show-video-btn" style="cursor: pointer; width: 60px;">
+      <h3> Facile à utiliser</h3>
+      <p> Regardez notre vidéo tutorielle ! </p>
     </div>
-  </section>
-
-  <footer>
-    &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
-  </footer>
-
-  <div id="cookie-popup" style="position: fixed; bottom: 20px; right: 20px; background: #fef3c7; color: #78350f; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Inter', sans-serif; display: flex; align-items: center; gap: 10px;">
-    <img src="https://img.icons8.com/emoji/48/cookie-emoji.png" alt="cookie" style="height: 40px;">
-    <div>
-      <strong>Pas de panique !</strong><br />
-      Nous ne collectons pas de cookies 🍪
+    <div class="feature">
+      <img src="public/images/gratuit.png" alt="Gratuit" />
+      <h3>100% Gratuit</h3>
+      <p>Aucune publicité, aucun abonnement. Une solution ouverte pour tous.</p>
     </div>
-    <button onclick="document.getElementById('cookie-popup').style.display='none'" style="margin-left: 10px; background: none; border: none; font-size: 1.2rem; cursor: pointer;">✖</button>
   </div>
-  <script src="script.js"></script>
+</section>
 
-
-  <div id="video-popup">
-    <video id="video" controls>
-      <source src="public/tutoriel installation IApprenons.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas la lecture vidéo.
-    </video>
-    <button id="close-video-btn">✖</button>
+<section class="scroll-animate">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Aperçu de l'application</h2>
+  <div style="text-align: center;">
+    <img src="public/images/appli.png" alt="Capture de l'app" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
   </div>
+</section>
+
+<footer>
+  &copy; 2025 iApprenons. Tous droits réservés. | Conçue pour l'éducation.
+</footer>
+
+<!-- CGU POPUP -->
+<div id="cgu-popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(240, 249, 255, 0.95); color: #1e3a8a; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem;">
+  <div style="max-width: 800px;">
+    <h2 style="margin-bottom: 1rem; font-size: 2rem;">Conditions Générales d'Utilisation</h2>
+    <p style="margin-bottom: 1.5rem;">L’application iApprenons est gratuite, ne collecte aucune donnée personnelle, ne nécessite pas de connexion internet et fonctionne entièrement localement. Elle a été conçue dans un cadre scolaire à but non lucratif.</p>
+    <button onclick="document.getElementById('cgu-popup').style.display='none'" class="cta-button">J'accepte</button>
+  </div>
+</div>
+
+<!-- CGU Reafficher -->
+<button onclick="document.getElementById('cgu-popup').style.display='flex'" style="position: fixed; bottom: 20px; left: 20px; z-index: 999; background-color: #1e3a8a; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+  Conditions d'utilisation
+</button>
+
 </body>
-
 </html>
