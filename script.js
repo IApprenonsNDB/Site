@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const downloadBtn = document.getElementById("download-btn");
   if (downloadBtn) {
     downloadBtn.addEventListener("click", function () {
-      window.location.href = "https://github.com/IApprenonsNDB/Site/releases/download/V1.0.0/IApprenons_installeur.exe";
+      window.location.href = "https://github.com/IApprenonsNDB/Site/releases/download/v1.0.2/IApprenons_installeur.exe";
     });
   }
 
